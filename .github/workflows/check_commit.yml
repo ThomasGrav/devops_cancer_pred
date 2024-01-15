@@ -55,5 +55,5 @@ jobs:
     - name: Test Model
       env:
         SEUIL: ${{ vars.SEUIL }}
-      run: python .github/scripts/check_commit.py "${{ github.event.head_commit.message }}" "Update"
-        .py
+      run: python .github/scripts/check_commit.py "${{ github.event.head_commit.message }}" "chaîne_cible"
+
