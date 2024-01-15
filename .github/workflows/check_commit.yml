@@ -1,0 +1,17 @@
+name: Check Commit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v2
+
+    - name: Exécuter le script Python
+      run: python .github/scripts/check_commit.py "${{ github.event.head_commit.message }}" "Update"
